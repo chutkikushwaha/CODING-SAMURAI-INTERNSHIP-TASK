@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Analytics</h2>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Reports</li>
+        <li>Settings</li>
+        <li>Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header>
+        <h1>Analytics Dashboard</h1>
+      </header>
+
+      <!-- Top Stats -->
+      <section class="stats">
+        <div class="stat-card blue">
+          <p>Total Users</p>
+          <h2>12,560</h2>
+        </div>
+        <div class="stat-card green">
+          <p>New Signups</p>
+          <h2>1,240</h2>
+        </div>
+        <div class="stat-card purple">
+          <p>Revenue</p>
+          <h2>₹58,000</h2>
+        </div>
+        <div class="stat-card orange">
+          <p>Conversion Rate</p>
+          <h2>3.4%</h2>
+        </div>
+      </section>
+
+      <!-- Charts -->
+      <section class="charts">
+        <div class="chart-card">
+          <h3>User Growth Over Time</h3>
+          <canvas id="lineChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Monthly Revenue Breakdown</h3>
+          <canvas id="barChart"></canvas>
+        </div>
+      </section>
+
+      <!-- Table -->
+      <section class="table-section">
+        <h3>Top Performing Categories</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Users</th>
+              <th>Revenue</th>
+              <th>Growth</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Electronics</td>
+              <td>10,300</td>
+              <td>₹56,000</td>
+              <td>3.4%</td>
+            </tr>
+            <tr>
+              <td>Furniture</td>
+              <td>12,200</td>
+              <td>₹14,000</td>
+              <td>6%</td>
+            </tr>
+            <tr>
+              <td>Clothes</td>
+              <td>53,000</td>
+              <td>₹25,000</td>
+              <td>8%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
