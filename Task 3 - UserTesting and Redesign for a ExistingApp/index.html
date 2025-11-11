@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Testing & Redesign Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🎯 User Testing & Redesign — Movie Booking App</h1>
+    <!--<p>Comparing the old vs improved design based on usability testing</p>!-->
+  </header>
+
+  <!-- Comparison Container -->
+  <div class="comparison-container">
+
+    <!-- BEFORE DESIGN -->
+    <section class="card old-ui">
+      <h2>❌ Before Redesign (Old UI)</h2>
+      <div class="old-box">
+        <label>Date:</label>
+        <input type="text" placeholder="Type date manually" />
+
+        <label>Time:</label>
+        <input type="text" placeholder="Enter time (e.g. 7PM)" />
+
+        <label>Seats (enter number):</label>
+        <input type="number" placeholder="1" />
+
+        <button class="btn-old">Proceed</button>
+      </div>
+      <ul class="feedback">
+        <li>❗ No clear seat selection</li>
+        <li>❗ Users confused with manual inputs</li>
+        <li>❗ No confirmation message</li>
+      </ul>
+    </section>
+
+    <!-- AFTER DESIGN -->
+    <section class="card new-ui">
+      <h2>✅ After Redesign (Improved UI)</h2>
+
+      <div class="new-app">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" />
+
+        <label for="time">Select Time:</label>
+        <select id="time">
+          <option value="">Choose time</option>
+          <option>5:00 PM</option>
+          <option>7:00 PM</option>
+          <option>9:00 PM</option>
+        </select>
+
+        <h3>Select Seats:</h3>
+        <div id="seat-container"></div>
+
+        <div class="button-row">
+          <button id="book-btn" class="primary-btn">Book</button>
+          <button id="cancel-btn" class="secondary-btn">Cancel</button>
+        </div>
+
+        <p id="message" class="error-msg"></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Toast message -->
+  <div id="toast">Booking Confirmed ✔</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
